@@ -1,0 +1,27 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "agendatattoo",
+    "password": "agendatattoo",
+    "database": "agendatattoo",
+    "entities": ["./dist/modules/**/infra/typeorm/entities/*.{js,ts}"],
+    "migrations": ["./dist/shared/infra/typeorm/migrations/*.{js,ts}"],
+    "seeds": ["./dist/modules/**/infra/typeorm/seeds/*.{js,ts}"],
+    "factories": ["./dist/modules/**/infra/typeorm/factories/*.{js,ts}"],
+    "cli": {
+      "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    }
+  },
+  {
+    "name": "mongo",
+    "type": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "agendatattoo",
+    "useUnifiedTopology": true,
+    "entities": ["./dist/modules/**/infra/typeorm/schemas/*.{js,ts}"]
+  }
+]
